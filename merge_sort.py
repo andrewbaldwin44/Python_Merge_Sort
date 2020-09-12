@@ -7,8 +7,8 @@ def merge_sort(list):
     if n <= 1:
         return list
 
-    first_half = merge_sort(list[0:n/2])
-    second_half = merge_sort(list[n/2:])
+    first_half = merge_sort(list[0:int(n/2)])
+    second_half = merge_sort(list[int(n/2):])
 
     while first_half or second_half:
         if not second_half or (first_half and first_half[0] < second_half[0]):
